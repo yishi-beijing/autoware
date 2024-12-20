@@ -139,4 +139,15 @@ repositories:
     type: git
     url: https://github.com/yishi-beijing/sensor.git
     version: main
-
+  sensor_kit/private_hw_vehicle_launch:
+    type: git
+    url: https://github.com/yishi-beijing/private_hw_vehicle_launch.git
+    version: 0.39.0
+  sensor_kit/sample_sensor_kit_launch:
+    type: git
+    url: https://github.com/yishi-beijing/private_hw_sensor_kit.git
+    version: 0.39.0
+  param/private_hw_individual_params:
+    type: git
+    url: https://github.com/yishi-beijing/private_hw_individual_params.git
+    version: main
