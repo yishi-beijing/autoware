@@ -121,10 +121,10 @@ repositories:
     type: git
     url: https://github.com/yishi-beijing/sample_vehicle_launch.git
     version: main
-  vehicle/awsim_labs_vehicle_launch:
-    type: git
-    url: https://github.com/yishi-beijing/awsim_labs_vehicle_launch.git
-    version: main
+ # vehicle/awsim_labs_vehicle_launch:
+ #   type: git
+ #   url: https://github.com/yishi-beijing/awsim_labs_vehicle_launch.git
+ #   version: main
   vehicle/external/pacmod_interface:
     type: git
     url: https://github.com/yishi-beijing/pacmod_interface.git
