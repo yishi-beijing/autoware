@@ -134,3 +134,9 @@ repositories:
     type: git
     url: https://github.com/yishi-beijing/autoware_individual_params.git
     version: main
+
+  sensor:
+    type: git
+    url: https://github.com/yishi-beijing/sensor.git
+    version: main
+
