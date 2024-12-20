@@ -108,10 +108,10 @@ repositories:
     type: git
     url: https://github.com/yishi-beijing/awsim_sensor_kit_launch.git
     version: 0.39.0
-  sensor_kit/awsim_labs_sensor_kit_launch:
-    type: git
-    url: https://github.com/yishi-beijing/awsim_labs_sensor_kit_launch.git
-    version: main
+ # sensor_kit/awsim_labs_sensor_kit_launch:
+ #  type: git
+ #   url: https://github.com/yishi-beijing/awsim_labs_sensor_kit_launch.git
+ #  version: main
   sensor_kit/single_lidar_sensor_kit_launch:
     type: git
     url: https://github.com/yishi-beijing/single_lidar_sensor_kit_launch.git
