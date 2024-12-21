@@ -1,18 +1,6 @@
-sudo ./docker/run.sh --devel --no-nvidia --map-path /home/nvidia/autoware_map/
-
-sudo ./docker/run.sh --devel --map-path /home/nvidia/autoware_map/
-
-sudo docker run -it --rm --net=host --runtime nvidia -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix nvcr.io/nvidia/l4t-cuda:12.2.2-devel-arm64-ubuntu22.04
-
-sudo docker run -it --rm --net=host --runtime nvidia -e DISPLAY=$DISPLAY  -v /usr/local/cuda-11.4/samples:/usr/local/cuda-11.4/samples -v /tmp/.X11-unix/:/tmp/.X11-unix nvcr.io/nvidia/l4t-cuda:11.4.14-runtime
 
 
-sudo ./docker/run.sh --devel --no-nvidia --map-path /home/nvidia/autoware_map/  --workspace /home/nvidia/autoware
-
-docker run -it  --privileged --net=host -e LOCAL_UID=0 -e LOCAL_GID=0 -e LOCAL_USER=root -e LOCAL_GROUP=root -e DISPLAY=:1 -v /tmp/.X11-unix/:/tmp/.X11-unix -e XAUTHORITY=/run/user/1000/gdm/Xauthority -e XDG_RUNTIME_DIR= -e NVIDIA_DRIVER_CAPABILITIES=all -v /etc/localtime:/etc/localtime:ro -v /home/nvidia/autoware:/workspace -v /home/nvidia/autoware_map/:/autoware_map:ro huanwei:507 /bin/bash
-
-
-ros2 launch autoware_launch planning_simulator.launch.xml map_path:=/home/nvidia/autoware_map/map704 vehicle_model:=private_hw_vehicle sensor_model:=private_hw_sensor_kit
+ros2 launch autoware_launch planning_simulator.launch.xml map_path:=/home/nvidia/autoware_map/sample-map-planning vehicle_model:=private_hw_vehicle sensor_model:=private_hw_sensor_kit
 
 ros2 launch autoware_launch autoware.launch.xml map_path:=/home/nvidia/autoware_map/map704 vehicle_model:=private_hw_vehicle sensor_model:=private_hw_sensor_kit centerpoint_model_name:=centerpoint
 
@@ -39,16 +27,6 @@ sudo apt install python3-tooz
 mkdir src
 vcs import src < autoware.repos
 
-
 export PATH="$PATH:/usr/local/cuda-12.2/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-12.2/lib64"
-ros2 bag record /sensing/lidar/top/pointcloud_raw_ex /sensing/gnss/ublox/nav_sav_fix /sensing/imu/imu_data /sensing/imu/tamagawa/imu_raw
 
-
-ros2 launch autoware_launch autoware.launch.xml map_path:=/home/nvidia/autoware_map/map704 vehicle_model:=private_hw_vehicle sensor_model:=private_hw_sensor_kit centerpoint_model_name:=centerpoint perception_mode:=camera_lidar_fusion image_number:=1
-
-ros2 launch autoware_launch autoware.launch.xml map_path:=/home/nvidia/autoware_map/map_aviation vehicle_model:=private_hw_vehicle sensor_model:=private_hw_sensor_kit centerpoint_model_name:=centerpoint 
-ros2 run canbus canbus_node
-ros2 run web_socket web_socket_node 
-source install/setup.bash
-ros2 launch autoware_launch planning_simulator.launch.xml map_path:=/home/nvidia/autoware_map/map_aviation vehicle_model:=private_hw_vehicle sensor_model:=private_hw_sensor_kit
