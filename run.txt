@@ -2,9 +2,9 @@
 
 ros2 launch autoware_launch planning_simulator.launch.xml map_path:=/home/nvidia/autoware_map/sample-map-planning vehicle_model:=private_hw_vehicle sensor_model:=private_hw_sensor_kit
 
-ros2 launch autoware_launch autoware.launch.xml map_path:=/home/nvidia/autoware_map/map704 vehicle_model:=private_hw_vehicle sensor_model:=private_hw_sensor_kit centerpoint_model_name:=centerpoint
+ros2 launch autoware_launch autoware.launch.xml map_path:=/home/nvidia/autoware_map/Test_lanlet_maps vehicle_model:=private_hw_vehicle sensor_model:=private_hw_sensor_kit 
 
-
+ros2 launch autoware_launch autoware.launch.xml map_path:=/home/nvidia/autoware_map/Test_lanlet_maps vehicle_model:=sample_vehicle sensor_model:=sample_sensor_kit 
 
 
 
@@ -30,3 +30,4 @@ vcs import src < autoware.repos
 export PATH="$PATH:/usr/local/cuda-12.2/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-12.2/lib64"
 
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
