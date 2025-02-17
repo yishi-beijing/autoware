@@ -124,7 +124,7 @@ repositories:
   # vehicle
   vehicle/private_hw_vehicle_launch:
     type: git
-    url: git@github.com:yishi-beijing/private_hw_vehicle_launch.git
+    url: https://github.com/yishi-beijing/private_hw_vehicle_launch.git
     version: main
 
   vehicle/external/pacmod_interface:
@@ -138,6 +138,6 @@ repositories:
     version: main
   senser:
     type: git
-    url: git@github.com:yishi-beijing/sensor.git
+    url: https://github.com/yishi-beijing/sensor.git
     version: main    
     
